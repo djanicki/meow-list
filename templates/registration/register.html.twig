@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register - My Checklist{% endblock %}
+
+{% block body %}
+    <div class="card" style="margin: 0 auto;">
+        <h2>Create Account</h2>
+        <p class="mb-4 text-muted">Join My Checklist today</p>
+
+        {{ form_start(registrationForm) }}
+            <div class="form-group">
+                {{ form_label(registrationForm.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(registrationForm.email) }}
+                <div class="form-error">
+                    {{ form_errors(registrationForm.email) }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="password-wrapper">
+                    {{ form_widget(registrationForm.plainPassword) }}
+                    <button type="button" class="password-toggle" id="togglePasswordBtn" aria-label="Show password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-off-icon" style="display: none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                    </button>
+                </div>
+                <div class="form-error">
+                    {{ form_errors(registrationForm.plainPassword) }}
+                </div>
+                <div class="form-help">
+                    At least 8 chars, 1 letter, 1 number
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%">Sign Up</button>
+        {{ form_end(registrationForm) }}
+
+        <p class="mt-4 form-help">
+            Already have an account? <a href="{{ path('app_login') }}">Log in</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('togglePasswordBtn').addEventListener('click', function() {
+            const inputId = '{{ registrationForm.plainPassword.vars.id }}';
+            const input = document.getElementById(inputId);
+            const eyeIcon = this.querySelector('.eye-icon');
+            const eyeOffIcon = this.querySelector('.eye-off-icon');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                eyeIcon.style.display = 'none';
+                eyeOffIcon.style.display = 'block';
+                this.setAttribute('aria-label', 'Hide password');
+            } else {
+                input.type = 'password';
+                eyeIcon.style.display = 'block';
+                eyeOffIcon.style.display = 'none';
+                this.setAttribute('aria-label', 'Show password');
+            }
+        });
+    </script>
+{% endblock %}

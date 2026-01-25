@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log In - My Checklist{% endblock %}
+
+{% block body %}
+    <div class="card" style="margin: 0 auto;">
+        <h2>Log In</h2>
+        <p class="mb-4 text-muted">Welcome back!</p>
+
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <form method="post">
+            <div class="form-group">
+                <label for="username" class="form-label">Email</label>
+                <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-input" autocomplete="email" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="_password" id="password" class="form-input" autocomplete="current-password" required>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
+        </form>
+        
+        <p class="mt-4 form-help">
+            Don't have an account? <a href="{{ path('app_register') }}">Sign up</a>
+        </p>
+    </div>
+{% endblock %}

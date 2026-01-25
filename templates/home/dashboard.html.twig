@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard - My Checklist{% endblock %}
+
+{% block body %}
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+        <h1>Dashboard</h1>
+        <p class="mb-4">Welcome back! This is the placeholder page for Step 2.</p>
+        
+        <div class="mt-4">
+            <a href="{{ path('app_logout') }}" class="btn btn-secondary">Log Out</a>
+        </div>
+    </div>
+{% endblock %}
