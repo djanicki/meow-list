@@ -1,12 +1,12 @@
 <?php
 
-namespace App\UI\Http\Controller;
+namespace MeowList\UI\Http\Controller;
 
-use App\Application\User\RegisterUser\RegisterUserCommand;
-use App\Application\User\RegisterUser\RegisterUserHandler;
-use App\Domain\User\Exception\UserAlreadyExistsException;
-use App\Domain\User\User;
-use App\UI\Http\Form\RegistrationFormType;
+use MeowList\Application\User\RegisterUser\RegisterUserCommand;
+use MeowList\Application\User\RegisterUser\RegisterUserHandler;
+use MeowList\Domain\User\Exception\UserAlreadyExistsException;
+use MeowList\Domain\User\User;
+use MeowList\UI\Http\Form\RegistrationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\Form\FormError;

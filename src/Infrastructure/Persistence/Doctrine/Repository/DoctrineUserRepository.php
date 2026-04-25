@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Persistence\Doctrine\Repository;
+namespace MeowList\Infrastructure\Persistence\Doctrine\Repository;
 
-use App\Domain\User\User;
-use App\Domain\User\UserRepositoryInterface;
+use MeowList\Domain\User\User;
+use MeowList\Domain\User\UserRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;

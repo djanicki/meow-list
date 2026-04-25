@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\Exception;
+namespace MeowList\Domain\User\Exception;
 
 class UserAlreadyExistsException extends \DomainException
 {

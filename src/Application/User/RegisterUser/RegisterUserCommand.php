@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Application\User\RegisterUser;
+namespace MeowList\Application\User\RegisterUser;
 
 class RegisterUserCommand
 {

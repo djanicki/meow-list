@@ -1,6 +1,6 @@
 <?php
 
-namespace App\UI\Http\Controller;
+namespace MeowList\UI\Http\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Http\Controller;
+namespace MeowList\UI\Http\Controller;
 
-use App\Application\Todo\Command\ChangeTodoItemStatusCommand;
-use App\Application\Todo\Command\ChangeTodoItemStatusCommandHandler;
-use App\Application\Todo\Command\CreateTodoItemCommand;
-use App\Application\Todo\Command\CreateTodoItemCommandHandler;
-use App\Application\Todo\Command\DeleteTodoItemCommand;
-use App\Application\Todo\Command\DeleteTodoItemCommandHandler;
+use MeowList\Application\Todo\Command\ChangeTodoItemStatusCommand;
+use MeowList\Application\Todo\Command\ChangeTodoItemStatusCommandHandler;
+use MeowList\Application\Todo\Command\CreateTodoItemCommand;
+use MeowList\Application\Todo\Command\CreateTodoItemCommandHandler;
+use MeowList\Application\Todo\Command\DeleteTodoItemCommand;
+use MeowList\Application\Todo\Command\DeleteTodoItemCommandHandler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,7 +36,7 @@ class TodoController extends AbstractController
 
         // We assume User ID is available via getUser()->getId() depending on how User represents id
         // In our User class, getId() returns the ID.
-        /** @var \App\Domain\User\User $dbUser */
+        /** @var \MeowList\Domain\User\User $dbUser */
         $dbUser = $user;
         
         $command = new CreateTodoItemCommand($dbUser->getId(), trim($text));
@@ -55,7 +55,7 @@ class TodoController extends AbstractController
         $data = json_decode($request->getContent(), true);
         $isDone = (bool) ($data['isDone'] ?? false);
 
-        /** @var \App\Domain\User\User $dbUser */
+        /** @var \MeowList\Domain\User\User $dbUser */
         $dbUser = $user;
 
         try {
@@ -74,7 +74,7 @@ class TodoController extends AbstractController
         DeleteTodoItemCommandHandler $handler,
         UserInterface $user
     ): JsonResponse {
-        /** @var \App\Domain\User\User $dbUser */
+        /** @var \MeowList\Domain\User\User $dbUser */
         $dbUser = $user;
 
         try {

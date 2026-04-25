@@ -1,12 +1,12 @@
 <?php
 
-namespace App\UI\Http\Controller;
+namespace MeowList\UI\Http\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use App\Application\Todo\Query\GetTodosForUserQuery;
-use App\Application\Todo\Query\GetTodosForUserQueryHandler;
+use MeowList\Application\Todo\Query\GetTodosForUserQuery;
+use MeowList\Application\Todo\Query\GetTodosForUserQueryHandler;
 
 class HomeController extends AbstractController
 {
@@ -27,7 +27,7 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('app_login'); // Should happen automatically because of security config, but just in case
         }
 
-        /** @var \App\Domain\User\User $dbUser */
+        /** @var \MeowList\Domain\User\User $dbUser */
         $dbUser = $user;
 
         $dtos = $todosHandler(new GetTodosForUserQuery($dbUser->getId()));

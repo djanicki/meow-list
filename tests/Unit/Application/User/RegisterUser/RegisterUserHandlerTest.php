@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Tests\Unit\Application\User\RegisterUser;
+namespace MeowList\Tests\Unit\Application\User\RegisterUser;
 
-use App\Application\User\RegisterUser\RegisterUserCommand;
-use App\Application\User\RegisterUser\RegisterUserHandler;
-use App\Domain\User\User;
-use App\Domain\User\UserRepositoryInterface;
+use MeowList\Application\User\RegisterUser\RegisterUserCommand;
+use MeowList\Application\User\RegisterUser\RegisterUserHandler;
+use MeowList\Domain\User\User;
+use MeowList\Domain\User\UserRepositoryInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 

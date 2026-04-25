@@ -8,7 +8,7 @@ security:
         # users_in_memory: { memory: null }
         app_user_provider:
             entity:
-                class: App\Domain\User\User
+                class: MeowList\Domain\User\User
                 property: email
 
     firewalls:

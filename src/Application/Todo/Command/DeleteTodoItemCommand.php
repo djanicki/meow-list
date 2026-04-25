@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Application\Todo\Command;
+namespace MeowList\Application\Todo\Command;
 
 class DeleteTodoItemCommand
 {

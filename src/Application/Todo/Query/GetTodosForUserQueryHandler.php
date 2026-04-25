@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Application\Todo\Query;
+namespace MeowList\Application\Todo\Query;
 
-use App\Domain\Todo\TodoItemRepositoryInterface;
+use MeowList\Domain\Todo\TodoItemRepositoryInterface;
 
 class GetTodosForUserQueryHandler
 {

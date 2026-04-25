@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Todo;
+namespace MeowList\Domain\Todo;
 
 class TodoItem
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User;
+namespace MeowList\Domain\User;
 
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

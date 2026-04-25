@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Persistence\Doctrine\Repository;
+namespace MeowList\Infrastructure\Persistence\Doctrine\Repository;
 
-use App\Domain\Todo\TodoItem;
-use App\Domain\Todo\TodoItemRepositoryInterface;
+use MeowList\Domain\Todo\TodoItem;
+use MeowList\Domain\Todo\TodoItemRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

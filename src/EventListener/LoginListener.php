@@ -1,8 +1,8 @@
 <?php
 
-namespace App\EventListener;
+namespace MeowList\EventListener;
 
-use App\Domain\User\User;
+use MeowList\Domain\User\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 use Symfony\Component\Security\Http\Event\LoginFailureEvent;

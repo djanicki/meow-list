@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User;
+namespace MeowList\Domain\User;
 
 interface UserRepositoryInterface
 {

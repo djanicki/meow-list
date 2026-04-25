@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Tests\Unit\Domain\User;
+namespace MeowList\Tests\Unit\Domain\User;
 
-use App\Domain\User\User;
+use MeowList\Domain\User\User;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase

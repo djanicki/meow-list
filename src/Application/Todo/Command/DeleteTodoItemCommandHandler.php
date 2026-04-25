@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Application\Todo\Command;
+namespace MeowList\Application\Todo\Command;
 
-use App\Domain\Todo\TodoItemRepositoryInterface;
+use MeowList\Domain\Todo\TodoItemRepositoryInterface;
 
 class DeleteTodoItemCommandHandler
 {

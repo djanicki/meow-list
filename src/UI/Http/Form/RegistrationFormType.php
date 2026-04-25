@@ -1,8 +1,8 @@
 <?php
 
-namespace App\UI\Http\Form;
+namespace MeowList\UI\Http\Form;
 
-use App\Domain\User\User;
+use MeowList\Domain\User\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;

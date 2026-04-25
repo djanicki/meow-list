@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\UI\Http\Controller;
+namespace MeowList\Tests\UI\Http\Controller;
 
-use App\Application\Todo\Command\CreateTodoItemCommand;
-use App\Application\Todo\Command\CreateTodoItemCommandHandler;
-use App\Domain\User\User;
-use App\UI\Http\Controller\TodoController;
+use MeowList\Application\Todo\Command\CreateTodoItemCommand;
+use MeowList\Application\Todo\Command\CreateTodoItemCommandHandler;
+use MeowList\Domain\User\User;
+use MeowList\UI\Http\Controller\TodoController;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 

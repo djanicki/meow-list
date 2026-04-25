@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="App\Domain\Todo\TodoItem" table="todo_item" repository-class="App\Infrastructure\Persistence\Doctrine\Repository\DoctrineTodoItemRepository">
+    <entity name="MeowList\Domain\Todo\TodoItem" table="todo_item" repository-class="MeowList\Infrastructure\Persistence\Doctrine\Repository\DoctrineTodoItemRepository">
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>

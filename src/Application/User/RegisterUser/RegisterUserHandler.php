@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Application\User\RegisterUser;
+namespace MeowList\Application\User\RegisterUser;
 
-use App\Domain\User\Exception\UserAlreadyExistsException;
-use App\Domain\User\User;
-use App\Domain\User\UserRepositoryInterface;
+use MeowList\Domain\User\Exception\UserAlreadyExistsException;
+use MeowList\Domain\User\User;
+use MeowList\Domain\User\UserRepositoryInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class RegisterUserHandler

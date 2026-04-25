@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Domain\Todo;
+namespace MeowList\Tests\Domain\Todo;
 
-use App\Domain\Todo\TodoItem;
+use MeowList\Domain\Todo\TodoItem;
 use PHPUnit\Framework\TestCase;
 
 class TodoItemTest extends TestCase

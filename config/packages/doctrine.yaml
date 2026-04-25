@@ -15,12 +15,12 @@ doctrine:
         auto_mapping: true
         mappings:
         mappings:
-            App:
+            MeowList:
                 type: xml
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping'
-                prefix: 'App\Domain'
-                alias: App
+                prefix: 'MeowList\Domain'
+                alias: MeowList
         controller_resolver:
             auto_mapping: false
 
