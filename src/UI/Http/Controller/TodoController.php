@@ -38,7 +38,7 @@ class TodoController extends AbstractController
         // In our User class, getId() returns the ID.
         /** @var \MeowList\Domain\User\User $dbUser */
         $dbUser = $user;
-        
+
         $command = new CreateTodoItemCommand($dbUser->getId(), trim($text));
         $handler($command);
 

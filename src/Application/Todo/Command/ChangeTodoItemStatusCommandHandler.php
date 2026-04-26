@@ -23,10 +23,11 @@ class ChangeTodoItemStatusCommandHandler
 
         if ($command->isDone) {
             $todoItem->markAsDone();
-        } else {
-            $todoItem->markAsUndone();
+            $this->repository->save($todoItem);
+            return;
         }
 
+        $todoItem->markAsUndone();
         $this->repository->save($todoItem);
     }
 }

@@ -19,7 +19,7 @@ class GetTodosForUserQueryHandler
     public function __invoke(GetTodosForUserQuery $query): array
     {
         $items = $this->repository->findByUserId($query->userId);
-        
+
         $dtos = [];
         foreach ($items as $item) {
             $dtos[] = new TodoItemDto(

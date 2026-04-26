@@ -6,6 +6,7 @@ namespace MeowList\Domain\Todo;
 
 class TodoItem
 {
+    /** @phpstan-ignore property.unusedType */
     private ?int $id = null;
     private int $userId;
     private string $text;

@@ -7,8 +7,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    /** @phpstan-ignore property.unusedType */
     private ?int $id = null;
     private ?string $email = null;
+    /** @var string[] */
     private array $roles = [];
     private ?string $password = null;
     private ?\DateTimeImmutable $createdAt = null;
@@ -59,6 +61,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return array_unique($roles);
     }
 
+    /**
+     * @param string[] $roles
+     */
     public function setRoles(array $roles): static
     {
         $this->roles = $roles;

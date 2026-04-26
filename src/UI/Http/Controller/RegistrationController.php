@@ -34,7 +34,7 @@ class RegistrationController extends AbstractController
             $email = $user->getEmail();
 
             $command = new RegisterUserCommand($email, $plainPassword);
-            
+
             try {
                 $user = $registerUserHandler->handle($command);
 

@@ -39,7 +39,7 @@ class TodoControllerTest extends TestCase
         $handler->expects($this->never())->method('__invoke');
 
         $user = $this->createMock(User::class);
-        
+
         $request = new Request([], [], [], [], [], [], json_encode(['text' => '  ']));
 
         $controller = new TodoController();
